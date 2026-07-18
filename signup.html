@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title> Sign up page</title>
+    <link rel="stylesheet" href="style2.css">
+     <link rel="icon" type="image/png" href="facebook.png">
+</head>    
+<body>
+    <div class="container">
+    <h1 id="main_head">facebook</h1>
+    </div>
+    <div class="area">
+    <h4>Create a new account</h4>
+    <p id="sub_head">It's quick and easy</p>
+    <hr>
+    <form id="signupForm">
+        <div class="name-row">
+            <input type="text" name="first_name" id="first_name" placeholder="First name">
+            <input type="text" name="Sur_name" id="surname" placeholder="Surname">
+        </div><br>
+        <p class="f4">Date of birth</p> 
+        <div class="date-row">
+            <input type="number" name="day" id="day" placeholder="Day">
+            <input type="number" name="month" id="month" placeholder="Month">
+            <input type="number" name="year" id="year" placeholder="Year"><br><br>
+        </div>
+        <p class="f4">Gender</p>
+        <div class="gender-row">
+            <div class="gender-option">
+                     <label for="female">Female</label>
+                <input type="radio" name="gender" value="Female" id="female">
+            </div>
+            <div class="gender-option">
+                 <label for="male">Male</label>
+                <input type="radio" name="gender" value="Male" id="male">
+            </div>
+            <div class="gender-option">
+                <label for="custom">Custom</label>
+                <input type="radio" name="gender" value="Custom" id="custom">
+            </div>
+        </div><br><br>
+        <input type="text" id="email" name="email" placeholder="Mobile number or email address"><br><br>
+        <input type="password" id="password" name="password" placeholder="New password"><br><br>
+        <p class="pp">People who use our service may have uploaded your contact information to Facebook. <a href="Learn more">Learn more</a>.<br><br>
+           By clicking Sign Up, you agree to our <a href="Terms">Terms</a>,<a href="Privacy Policy">Privacy Policy</a> and<a href="Cookies Policy">Cookies Policy</a>.<br>
+           You may receive SMS notifications from us and can opt out at any time.</p>
+        <input type="Submit" value="Sign up"><br><br>
+        <a  id="already" href="index.html">Already have an account?</a>
+    </form>
+    </div>
+    <script>
+document.getElementById("signupForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const firstName = document.getElementById("first_name").value.trim();
+  const surname = document.getElementById("surname").value.trim();
+  const day = document.getElementById("day").value.trim();
+  const month = document.getElementById("month").value.trim();
+  const year = document.getElementById("year").value.trim();
+  const gender = document.querySelector('input[name="gender"]:checked');
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (!firstName || !surname || !day || !month || !year || !gender || !email || !password) {
+    alert("Please fill all details before signing up.");
+  } else {
+    alert("Sign up successful!");
+  }
+});
+</script>
+</body>
+</html>

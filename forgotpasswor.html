@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="icon" type="image/png" href="facebook.png">
+</head>
+<body>
+    <div class="container-horizontal">
+        <h1 id="main_head">facebook</h1>
+        <form class="horizontal-form">
+            <input type="text" name="email" placeholder="Email or phone">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" value="Log in ">
+            <a href="Forgotten account">Forgotten account?</a>
+        </form>
+    </div>
+    <div class="account">
+    <h3 id="sub_head">Find Your Account</h3>
+    <hr>
+    <p class="f4">Please enter your email address or mobile number to search for your account.</p>
+    <form class="account-form">
+        <input type="text" id="email" name="search" placeholder="Email address or mobile number">
+        <hr>
+        <div class="account-buttons">
+            <input type="button" id="cancel" value="Cancel">
+            <input type="submit" id="search" value="Search">
+        </div>
+    </form>    
+    </div>
+    <script>
+document.getElementById("cancel").onclick = function() {
+    window.location.href = "index.html";
+};
+</script>
+</body>
+</html>

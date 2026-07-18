@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook login page</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" type="image/png" href="facebook.png">
+</head>
+<body>
+    <div class="container">
+    <h1 id="main-head">facebook</h1>
+    </div>
+    <div class="logo">
+    <h5>login to facebook</h5>
+    <form id="loginForm">
+        <input type="text" name="email" id="email" placeholder="Email or phone number"><br><br>
+        <input type="password" name="password" id="password" placeholder="Password"><br><br>
+        
+        <input type="submit" value="Log in"><br><br>
+        <a href="forgotpasswor.html">Forgotten password?</a>
+        <a href="signup.html">Sign up for facebook</a>
+       
+        
+        
+
+    </form>
+    </div>
+    
+    <script>
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const email = document.getElementById("email").value.trim();
+  const pass = document.getElementById("password").value.trim();
+  if (email === "" || pass === "") {
+    alert("Please fill all details before logging in.");
+  } else {
+    alert("Login successful!");
+  }
+});
+</script>
+</body>
+</html>
